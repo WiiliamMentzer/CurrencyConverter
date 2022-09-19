@@ -23,7 +23,7 @@ function currencyError(responseError, currencyBefore, currencyAfter) {
   document.getElementById("CurrencyOutput").innerHTML = null;
   const resultDisplay = document.getElementById("CurrencyOutput");
   if (responseError == "Error: 403 Forbidden") {
-    resultDisplay.innerHTML= `Uh oh there was an error! The API brought back no results, please check your .env file to check if you correctly applied your API key from https://www.exchangerate-api.com/dashboard ${responseError}`
+    resultDisplay.innerHTML= `Uh oh there was an error! The API brought back no results, please check your .env file to check if you correctly applied your API key from https://www.exchangerate-api.com/dashboard ${responseError}`;
   } else if (responseError == "Error: 400 Bad Request") {
     resultDisplay.innerHTML= `Uh oh there was an error! The API says that one of the currencies doesnt exist! ${responseError} ${currencyBefore} ${currencyAfter}`;
   } else {
