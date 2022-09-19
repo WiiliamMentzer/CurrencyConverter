@@ -1,8 +1,8 @@
 import { printElements } from ".";
 
-export function currencyConversionRates(currency1) {
+export function currencyConversionRates(currency1, currency2) {
   let request = new XMLHttpRequest();
-  const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/${currency1}`;
+  const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${currency1}/${currency2}`;
 
   request.addEventListener("loadend", function() {
     const response = JSON.parse(this.responseText);

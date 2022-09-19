@@ -18,6 +18,7 @@ function formSubmit(event){
 
   let currency1 = "USD";
   // let currency2 = document.getElementById("CurrencySelector2").value;
+  
   currencyConversionRates(currency1);
 }
 
