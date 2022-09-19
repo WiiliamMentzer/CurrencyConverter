@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import CurrencyCalculator from "./calculator.js";
 
 function currencyConvert(currencyAmmount, currencyBefore, currencyAfter) {
