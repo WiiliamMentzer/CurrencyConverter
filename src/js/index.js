@@ -1,7 +1,4 @@
-// import 'bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min,css';
-// import './css/styles.css'
-import CurrencyCalculator from "./calculator";
+import CurrencyCalculator from "./calculator.js";
 
 function currencyConvert(currencyAmmount, currencyBefore, currencyAfter) {
   CurrencyCalculator.currencyConversion(currencyAmmount, currencyBefore, currencyAfter)
@@ -29,7 +26,7 @@ function currencyError(responseError) {
 }
 
 
-function formSubmit(event){
+function formSubmit(event) {
   event.preventDefault();
 
   let currencyAmmount = document.getElementById("CurrencyAmmount").value;
