@@ -13,12 +13,14 @@ export function currencyConversionRates(cur) {
         reject(this);
       }
     })
+    apiRequest.open("GET", url, true);
+    apiRequest.send();
   })
 
   curPromise.then(function(apiRespone) {
     curResult(apiRespone);
   }, function(errorMSG) {
-    currencyConversionRates(errorMSG);
+    curError(errorMSG);
   })
 }
 
