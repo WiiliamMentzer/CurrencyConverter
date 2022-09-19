@@ -3,9 +3,9 @@
 <head>
   <title>CurrencyConverter</title>
 </head>
-<body class="container">
-  <div class="card">
-    <div>
+<body>
+  <div class="container">
+    <div class="card">
       <h1>Currency</h1>
       <form id="user-submit">
         <select id="CurrencySelector1">
@@ -23,7 +23,8 @@
           <option value="CNY">Yuan</option>
           <option value="INR">Rupee</option>
           <option value="RUB">Rouble</option>
-        </select>
+        </select><br>
+        <input type="integer" id="CurrencyAmmount" name="CurrencyAmmount"><br>
         <button type="submit">Currency Conversion</button>
       </form>
     </div>
@@ -31,11 +32,8 @@
   <div class="container">
     <div class="card">
       <h2>Conversion</h2>
-      <p id="CurrencyConverted"></p>
+      <p id="CurrencyOutput"></p>
     </div>
   </div>
-  <!-- <div>
-
-  </div> -->
 </body>
 </html>
