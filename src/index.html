@@ -8,22 +8,25 @@
     <div class="card">
       <h1>Currency</h1>
       <form id="user-submit">
-        <select id="CurrencySelector1">
+        <h3>You will convert:</h3>
+        <select id="CurrencyBefore" name="CurrencyBefore">
           <option value="EUR">Euro</option>
           <option value="USD">US Dollar</option>
           <option value="JPY">Yen</option>
           <option value="CNY">Yuan</option>
           <option value="INR">Rupee</option>
           <option value="RUB">Rouble</option>
-        </select><br>
-        <select id="CurrencySelector2">
+        </select>
+        <h3>into the currency</h3>
+        <select id="CurrencyAfter" name="CurrencyAfter">
           <option value="EUR">Euro</option>
           <option value="USD">US Dollar</option>
           <option value="JPY">Yen</option>
           <option value="CNY">Yuan</option>
           <option value="INR">Rupee</option>
           <option value="RUB">Rouble</option>
-        </select><br>
+        </select>
+        <p>.</p>
         <input type="integer" id="CurrencyAmmount" name="CurrencyAmmount"><br>
         <button type="submit">Currency Conversion</button>
       </form>

@@ -1,18 +1,45 @@
-// import 'bootstrap'
-// import 'bootstrap/dist/css/bootstrap.min,css'
+// import 'bootstrap';
+// import 'bootstrap/dist/css/bootstrap.min,css';
 // import './css/styles.css'
+import CurrencyCalculator from "./calculator";
+
+function currencyConvert(currencyAmmount, currencyBefore, currencyAfter) {
+  CurrencyCalculator.currencyConversion(currencyAmmount, currencyBefore, currencyAfter)
+  .then(function(response) {
+    if(response.result === "success") {
+      currencyResult(currencyAmmount, currencyBefore, currencyAfter, response.conversion_result);
+    } else if (response.result === "error") {
+      currencyError(response.result);
+    }
+  });
+}
+
+function currencyResult(currencyAmmount, currencyBefore, currencyAfter, response) {
+  document.getElementById("CurrencyOutput").innerHTML = null;
+  const resultDisplay = document.getElementById("CurrencyOutput");
+
+  resultDisplay.innerHTML= `You converted ${currencyAmmount} ${currencyBefore} into ${response} ${currencyAfter}!`;
+}
+
+function currencyError(responseError) {
+  document.getElementById("CurrencyOutput").innerHTML = null;
+  const resultDisplay = document.getElementById("CurrencyOutput");
+
+  resultDisplay.innerHTML= `Uh oh there was an error! The Error was ${responseError}`;
+}
+
 
 function formSubmit(event){
   event.preventDefault();
 
   let currencyAmmount = document.getElementById("CurrencyAmmount").value;
-  let currency1 = document.getElementById("CurrencySelector1").value;
-  let currency2 = document.getElementById("CurrencySelector2").value;
-  let currencyResult = document.getElementById("CurrencyOutput");
-  currencyResult.innerHTML = null;
+  let currencyBefore = document.getElementById("CurrencyBefore").value;
+  let currencyAfter = document.getElementById("CurrencyAfter").value;
+
+  currencyConvert(currencyAmmount, currencyBefore, currencyAfter);
 
 }
 
 window.addEventListener("load", function(){
-  document.querySelector("form").addEventListener("submit", formSubmit);
+  document.getElementById("user-submit").addEventListener("submit", formSubmit);
 });
