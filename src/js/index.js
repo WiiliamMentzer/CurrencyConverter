@@ -16,7 +16,7 @@ function currencyResult(currencyAmmount, currencyBefore, currencyAfter, apiRespo
   document.getElementById("CurrencyOutput").innerHTML = null;
   const resultDisplay = document.getElementById("CurrencyOutput");
 
-  resultDisplay.innerHTML= `You converted ${currencyAmmount} ${currencyBefore} into ${apiResponse} ${currencyAfter}!`;
+  resultDisplay.innerHTML = `You converted ${currencyAmmount} ${currencyBefore} into ${apiResponse} ${currencyAfter}!`;
 }
 
 function currencyError(responseError, currencyBefore, currencyAfter) {
@@ -25,9 +25,9 @@ function currencyError(responseError, currencyBefore, currencyAfter) {
   if (responseError == "Error: 403 Forbidden") {
     resultDisplay.innerHTML= `Uh oh there was an error! The API brought back no results, please check your .env file to check if you correctly applied your API key from https://www.exchangerate-api.com/dashboard ${responseError}`;
   } else if (responseError == "Error: 400 Bad Request") {
-    resultDisplay.innerHTML= `Uh oh there was an error! The API says that one of the currencies doesnt exist! ${responseError} ${currencyBefore} ${currencyAfter}`;
+    resultDisplay.innerHTML = `Uh oh there was an error! The API says that one of the currencies doesnt exist! ${responseError} ${currencyBefore} ${currencyAfter}`;
   } else {
-    resultDisplay.innerHTML= `Uh oh there was an error! The API brought back no results. This the fault of the API, please try later. ${responseError} ${currencyBefore} ${currencyAfter}`;
+    resultDisplay.innerHTML = `Uh oh there was an error! The API brought back no results. This the fault of the API, please try later. ${responseError} ${currencyBefore} ${currencyAfter}`;
   }
 }
 
