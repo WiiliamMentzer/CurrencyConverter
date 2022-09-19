@@ -25,10 +25,10 @@
 	* Webpack
   * Webpack-dev-server
   * Css-loader
+  * Dotenv-webpack
 	* ESLint
 	* Babel
 	* Jest
-  * Dotenv-webpack
 
 * Tested in the following browsers:
 	* Google Chrome (v.104.0)
